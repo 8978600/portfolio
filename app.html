@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinay's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to My Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#chat">Chat</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Hello! I am Vinay Charan. I am currently a third-year student at MLRT, specializing in software development with a focus on web applications. My academic journey has provided me with a solid foundation in programming languages such as Python and C, which I enjoy using to create efficient and innovative solutions.</p>
+            <p>I have a keen interest in web development and have honed my skills in HTML, CSS, and JavaScript. I am passionate about building user-friendly and visually appealing websites that not only meet user needs but also enhance their experience.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <ul>
+                <li><strong>Product Pulse Finalize:</strong> A fundraising platform using AI.</li>
+                <li><strong>E-commerce Website:</strong> Developed a basic e-commerce website with product listings, a shopping cart, and checkout functionality. Focused on user experience and responsive design.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Programming Languages:</strong>
+                    <ul>
+                        <li><strong>Python:</strong> Proficient in using Python for software development and scripting.</li>
+                        <li><strong>C:</strong> Knowledgeable in C programming for system-level applications.</li>
+                    </ul>
+                </li>
+                <li><strong>Web Development:</strong>
+                    <ul>
+                        <li><strong>HTML:</strong> Experienced in structuring web pages and content.</li>
+                        <li><strong>CSS:</strong> Skilled in styling and layout design for responsive web applications.</li>
+                        <li><strong>JavaScript:</strong> Competent in adding interactivity and dynamic elements to websites.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="chat">
+        <div class="container">
+            <h2>Chat with Me</h2>
+            <div id="chatBox">
+                <div id="messages"></div>
+                <form id="chatForm">
+                    <input type="text" id="chatInput" placeholder="Type your message here...">
+                    <button type="button" id="sendButton">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Vinay Charan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            $('#sendButton').click(function() {
+                const message = $('#chatInput').val();
+                if (message.trim() !== '') {
+                    $('#messages').append(`<div class='message'><p>${message}</p></div>`);
+                    $('#chatInput').val('');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
